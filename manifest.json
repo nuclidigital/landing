@@ -1,0 +1,52 @@
+{
+  "name": "Roger Gibaja - NucliDigital",
+  "short_name": "NucliDigital",
+  "description": "Portfolio professional de governança TIC, sobirania digital i sistemes documentats",
+  "start_url": "/V5/",
+  "scope": "/V5/",
+  "display": "standalone",
+  "background_color": "#fbf8f4",
+  "theme_color": "#423540",
+  "orientation": "portrait-primary",
+  "lang": "ca",
+  "dir": "ltr",
+  "categories": [
+    "portfolio",
+    "technology",
+    "governance"
+  ],
+  "icons": [
+    {
+      "src": "favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "hero-illustration.webp",
+      "sizes": "1920x1200",
+      "type": "image/webp",
+      "form_factor": "wide"
+    }
+  ]
+}

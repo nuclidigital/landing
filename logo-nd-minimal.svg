@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Marca ND definitiva · tres arestes, tres rols:
+       "/" coure (acció) · "\" plum (govern) · "_" teal (fonament digital) · nucli coure.
+       Mode fosc adaptatiu per a favicons en barres fosques. -->
+  <style>
+    .g { stroke: #423540; }
+    .d { stroke: #0f6b78; }
+    @media (prefers-color-scheme: dark) {
+      .g { stroke: #f4e8de; }
+      .d { stroke: #8fd3dc; }
+    }
+  </style>
+  <path d="M24 7 5 40" stroke="#b5624b" stroke-width="4.6" stroke-linecap="round"/>
+  <path class="g" d="M24 7 41 36.5" stroke-width="4.6" stroke-linecap="round"/>
+  <path class="d" d="M13.4 36.5H41" stroke-width="4.6" stroke-linecap="round"/>
+  <circle cx="24" cy="26.7" r="4.2" fill="#b5624b"/>
+</svg>

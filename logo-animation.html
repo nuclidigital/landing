@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'self'; form-action 'self'">
+    <title>Marca ND · Animació | NucliDigital</title>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#423540">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="logo-nd-minimal.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="brand-motion.css?v=3ace4e81">
+    <style>
+        @font-face {
+            font-family: "Fraunces";
+            src: url("fonts/fraunces-var.woff2") format("woff2-variations");
+            font-weight: 100 900;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Public Sans";
+            src: url("fonts/public-sans-var.woff2") format("woff2-variations");
+            font-weight: 100 900;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "JetBrains Mono";
+            src: url("fonts/jetbrains-mono-var.woff2") format("woff2-variations");
+            font-weight: 100 800;
+            font-display: swap;
+        }
+
+        :root {
+            --plum: #423540;
+            --plum-deep: #191320;
+            --copper: #b5624b;
+            --teal: #0f6b78;
+            --teal-deep: #003748;
+            --teal-soft: #8fd3dc;
+            --lime: #93d543;
+            --canvas: #fbf8f4;
+            --ink: #1e1b20;
+            --muted: #665f64;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 48px 24px 72px;
+            background: linear-gradient(180deg, #fbf8f4, #f0e9e1);
+            color: var(--ink);
+            font-family: "Public Sans", system-ui, sans-serif;
+            line-height: 1.65;
+        }
+
+        main {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .lab-tag {
+            color: var(--copper);
+            font-family: "JetBrains Mono", monospace;
+            font-size: .72rem;
+            font-weight: 560;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 10px 0 6px;
+            font-family: "Fraunces", Georgia, serif;
+            font-optical-sizing: auto;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 550;
+            font-variation-settings: "SOFT" 42, "WONK" 1;
+            line-height: 1.02;
+        }
+
+        .lede {
+            max-width: 56ch;
+            margin: 0 0 34px;
+            color: var(--muted);
+        }
+
+        .stage-card {
+            border: 1px solid rgba(66, 53, 64, .14);
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 24px 48px rgba(25, 19, 32, .09);
+            overflow: hidden;
+            transition: background .3s ease;
+        }
+
+        .stage-card.dark {
+            background: linear-gradient(135deg, var(--plum-deep), var(--plum) 60%, var(--teal-deep) 130%);
+        }
+
+        .stage {
+            display: grid;
+            place-items: center;
+            padding: 34px 20px 10px;
+        }
+
+        .stage svg {
+            width: min(340px, 74vw);
+            height: auto;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            padding: 6px 20px 26px;
+        }
+
+        button {
+            min-height: 46px;
+            border: 1px solid var(--copper);
+            border-radius: 999px;
+            padding: 10px 20px;
+            background: var(--copper);
+            color: #fff;
+            font: 700 .95rem "Public Sans", sans-serif;
+            cursor: pointer;
+            transition: transform .15s ease, background .15s ease, color .15s ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            background: #a2543f;
+        }
+
+        button.ghost {
+            background: transparent;
+            color: var(--copper);
+        }
+
+        .stage-card.dark button.ghost {
+            border-color: rgba(255, 250, 244, .5);
+            color: #fff;
+        }
+
+        button:focus-visible {
+            outline: 3px solid #c97856;
+            outline-offset: 3px;
+        }
+
+        .timeline {
+            margin: 26px 0 46px;
+            border-left: 2px solid rgba(181, 98, 75, .35);
+            padding: 4px 0 4px 20px;
+            color: var(--muted);
+            font-family: "JetBrains Mono", monospace;
+            font-size: .78rem;
+            line-height: 2;
+        }
+
+        .timeline b {
+            color: var(--ink);
+            font-weight: 640;
+        }
+
+        h2 {
+            margin: 0 0 16px;
+            font-family: "Fraunces", Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 550;
+        }
+
+        .variants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 44px;
+        }
+
+        .variant {
+            display: grid;
+            gap: 10px;
+            place-items: center;
+            border: 1px solid rgba(66, 53, 64, .14);
+            border-radius: 12px;
+            padding: 26px 16px 18px;
+            background: var(--canvas);
+        }
+
+        .variant.dark {
+            background: var(--plum-deep);
+        }
+
+        .variant span {
+            color: var(--muted);
+            font-family: "JetBrains Mono", monospace;
+            font-size: .68rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .variant.dark span {
+            color: #c9bbb4;
+        }
+
+        .chips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .chip {
+            border: 1px solid rgba(66, 53, 64, .14);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            font-size: .82rem;
+        }
+
+        .chip i {
+            display: block;
+            height: 52px;
+        }
+
+        .chip div {
+            padding: 10px 12px 12px;
+        }
+
+        .chip code {
+            display: block;
+            color: var(--muted);
+            font-family: "JetBrains Mono", monospace;
+            font-size: .7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p class="lab-tag">NucliDigital · Lab de marca</p>
+        <h1>La N que es plega fins al nucli</h1>
+        <p class="lede">Construcció animada de la marca: «|\|» (Nucli) → la barra esquerra s'inclina fins a «/», la
+            diagonal es manté, la barra dreta cau fins a «_» i el nucli s'encén amb un pols lima. SVG + CSS pur,
+            compatible amb la CSP estricta del web.</p>
+
+        <div class="stage-card" id="stage-card">
+            <div class="stage">
+                <svg class="nd-anim is-playing" id="mark" viewBox="0 0 120 120" fill="none" role="img"
+                    aria-label="Animació de la marca NucliDigital">
+                    <path class="nd-slash" d="M21 78 55.2 18.6" pathLength="1" />
+                    <path class="nd-diag" d="M55.2 18.6 85.8 71.7" pathLength="1" />
+                    <path class="nd-base" d="M85.8 71.7H36.1" pathLength="1" />
+                    <circle class="nd-pulse" cx="55.2" cy="54.06" r="7.56" />
+                    <circle class="nd-pulse nd-pulse--2" cx="55.2" cy="54.06" r="7.56" />
+                    <circle class="nd-nucli" cx="55.2" cy="54.06" r="7.56" />
+                </svg>
+            </div>
+            <div class="controls">
+                <button id="replay" type="button">Reprodueix de nou</button>
+                <button id="toggle-bg" type="button" class="ghost">Fons fosc</button>
+            </div>
+        </div>
+
+        <p class="timeline">
+            <b>0.0s</b> · es teclegen els tres traços «|\|»<br>
+            <b>0.85s</b> · «|» s'inclina en sentit horari fins a «/» — pren coure<br>
+            <b>1.15s</b> · «|» dret cau sobre el vèrtex compartit fins a «_» — pren teal<br>
+            <b>2.05s</b> · pop del nucli en coure<br>
+            <b>2.14s</b> · doble pols lima d'encesa (#93d543): el sistema és viu
+        </p>
+
+        <h2>Variants estàtiques</h2>
+        <div class="variants">
+            <div class="variant">
+                <svg viewBox="0 0 48 48" width="96" height="96" fill="none" aria-hidden="true">
+                    <path d="M24 7 5 40" stroke="#b5624b" stroke-width="4.6" stroke-linecap="round" />
+                    <path d="M24 7 41 36.5" stroke="#423540" stroke-width="4.6" stroke-linecap="round" />
+                    <path d="M13.4 36.5H41" stroke="#0f6b78" stroke-width="4.6" stroke-linecap="round" />
+                    <circle cx="24" cy="26.7" r="4.2" fill="#b5624b" />
+                </svg>
+                <span>Fons clar · teal #0f6b78</span>
+            </div>
+            <div class="variant dark">
+                <svg viewBox="0 0 48 48" width="96" height="96" fill="none" aria-hidden="true">
+                    <path d="M24 7 5 40" stroke="#b5624b" stroke-width="4.6" stroke-linecap="round" />
+                    <path d="M24 7 41 36.5" stroke="#f4e8de" stroke-width="4.6" stroke-linecap="round" />
+                    <path d="M13.4 36.5H41" stroke="#8fd3dc" stroke-width="4.6" stroke-linecap="round" />
+                    <circle cx="24" cy="26.7" r="4.2" fill="#b5624b" />
+                </svg>
+                <span>Fons fosc · teal-soft #8fd3dc</span>
+            </div>
+        </div>
+
+        <h2>Paleta i rols</h2>
+        <div class="chips">
+            <div class="chip">
+                <i style="background:#423540"></i>
+                <div>Plum — govern<code>#423540</code></div>
+            </div>
+            <div class="chip">
+                <i style="background:#b5624b"></i>
+                <div>Coure — acció<code>#b5624b</code></div>
+            </div>
+            <div class="chip">
+                <i style="background:#0f6b78"></i>
+                <div>Teal — fonament digital<code>#0f6b78</code></div>
+            </div>
+            <div class="chip">
+                <i style="background:#003748"></i>
+                <div>Petroli — fons profunds<code>#003748</code></div>
+            </div>
+            <div class="chip">
+                <i style="background:#93d543"></i>
+                <div>Lima — senyal live (només fosc/moviment)<code>#93d543</code></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const mark = document.getElementById('mark');
+        const card = document.getElementById('stage-card');
+        const toggle = document.getElementById('toggle-bg');
+
+        function replay() {
+            mark.classList.remove('is-playing');
+            void mark.getBoundingClientRect();
+            mark.classList.add('is-playing');
+        }
+
+        document.getElementById('replay').addEventListener('click', replay);
+
+        toggle.addEventListener('click', () => {
+            const dark = card.classList.toggle('dark');
+            mark.classList.toggle('nd-anim--dark', dark);
+            toggle.textContent = dark ? 'Fons clar' : 'Fons fosc';
+            replay();
+        });
+    </script>
+</body>
+
+</html>
